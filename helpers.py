@@ -2,7 +2,7 @@ import requests
 
 def get_words():
     url = "https://random-word-api.herokuapp.com/word"
-    params = {"number": 10}
+    params = {"number": 70}
 
     words = requests.get(url, params=params).json()
     return words
