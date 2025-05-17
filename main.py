@@ -68,12 +68,13 @@ def game_finished():
     game_started = False
     if highscore < score:
         highscore = score
-        high_score_label.configure(text=f"Score: {score}")
+        high_score_label.configure(text=f"Highscore: {score}")
         set_higscore(score)
+    timer_label.configure(text=f"Seconds left:")
     score = 0
     word_index = 0
     answer.config(state=DISABLED)
-    restart.grid(row=1, column=0, columnspan=3)
+    restart.grid(row=0, column=0, columnspan=3)
 
 
 def reset_game():
